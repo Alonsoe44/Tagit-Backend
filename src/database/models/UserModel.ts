@@ -9,6 +9,7 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
 
   password: {
@@ -18,7 +19,7 @@ const UserSchema = new Schema({
 
   notes: {
     type: Schema.Types.ObjectId,
-    default: [],
+
     ref: "Note",
   },
 });
