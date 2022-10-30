@@ -1,5 +1,5 @@
-interface Error {
+interface ErrorInterface {
   status?: number;
 }
 
-export default Error;
+export default ErrorInterface;
