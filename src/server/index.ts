@@ -8,6 +8,7 @@ import morgan from "morgan";
 import express from "express";
 import { internalServerError, notFoundError } from "./middlewares/errors";
 import usersRouter from "./routers/usersRouter";
+import userRouter from "./routers/userRouter";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(helmet());
 
 app.use(express.json());
 
+app.use("/user", userRouter);
 app.use("/users", usersRouter);
 
 app.use(notFoundError);
